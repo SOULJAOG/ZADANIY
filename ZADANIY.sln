@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZADANIY", "ZADANIY\ZADANIY.csproj", "{1CD838D0-32E8-4942-B120-06E2A07AC261}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PDF-Reader", "PDF-Reader\PDF-Reader.csproj", "{CE003460-6F28-44BA-9EBE-6512942336A8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{1CD838D0-32E8-4942-B120-06E2A07AC261}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1CD838D0-32E8-4942-B120-06E2A07AC261}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1CD838D0-32E8-4942-B120-06E2A07AC261}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE003460-6F28-44BA-9EBE-6512942336A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE003460-6F28-44BA-9EBE-6512942336A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE003460-6F28-44BA-9EBE-6512942336A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE003460-6F28-44BA-9EBE-6512942336A8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
