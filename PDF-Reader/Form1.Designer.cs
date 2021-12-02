@@ -103,13 +103,12 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
         private AxAcroPDFLib.AxAcroPDF axAcroPDF1;
+        public System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
 
