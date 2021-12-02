@@ -23,5 +23,10 @@ namespace PDF_Reader
             openFileDialog1.ShowDialog();
             axAcroPDF1.LoadFile(openFileDialog1.FileName);
         }
+
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
