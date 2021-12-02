@@ -19,7 +19,7 @@ namespace PDF_Reader
 
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            openFileDialog1.Filter = "Файлы pdf | *.pdf";
+            openFileDialog1.Filter = "Файлы pdf|*.pdf";
             openFileDialog1.ShowDialog();
             axAcroPDF1.LoadFile(openFileDialog1.FileName);
         }
