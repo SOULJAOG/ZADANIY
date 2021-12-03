@@ -12,6 +12,7 @@ namespace WinAsynchMethod
 {
     public partial class Form1 : Form
     {
+        private delegate int AsyncSumm(int x, int y);
         public Form1()
         {
             InitializeComponent();
