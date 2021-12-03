@@ -30,7 +30,7 @@ namespace WinAsinchDelegate
         {
             InitializeComponent();
         }
-        private void TineConsumingMethod(int second)
+        private void TimeConsumingMethod(int second)
         {
             for (int j = 1; j <= second; j++)
             {
@@ -39,6 +39,15 @@ namespace WinAsinchDelegate
                 if (Cansel) {
                     break;
                 }
+            }
+            if (Cansel)
+            {
+                System.Windows.Forms.MessageBox.Show("Conselled");
+                Cansel = false;
+            }
+            else
+            {
+                System.Windows.Forms.MessageBox.Show("Complete");
             }
         }
         private void Form1_Load(object sender, EventArgs e)
