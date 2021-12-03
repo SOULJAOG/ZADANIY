@@ -14,6 +14,7 @@ namespace WinAsinchDelegate
     {
         private delegate void TineConsumingMethodDelegate(int second);
         private delegate void SetProgressDelegate(int val);
+        bool Cansel;
         public void SetProgress(int val) { 
             if (progressBar1.InvokeRequired)
             {
@@ -34,6 +35,10 @@ namespace WinAsinchDelegate
             for (int j = 1; j <= second; j++)
             {
                 System.Threading.Thread.Sleep(1000);
+                SetProgress((int)(j * 100) / second);
+                if (Cansel) {
+                    break;
+                }
             }
         }
         private void Form1_Load(object sender, EventArgs e)

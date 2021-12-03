@@ -79,5 +79,10 @@ namespace WinBackgroundWorker
         {
             backgroundWorker1.CancelAsync();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
