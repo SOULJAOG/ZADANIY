@@ -35,6 +35,7 @@
             this.txbB = new System.Windows.Forms.TextBox();
             this.btnRun = new System.Windows.Forms.Button();
             this.btnWork = new System.Windows.Forms.Button();
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.SuspendLayout();
             // 
             // lblA
@@ -127,6 +128,7 @@
         private System.Windows.Forms.TextBox txbB;
         private System.Windows.Forms.Button btnRun;
         private System.Windows.Forms.Button btnWork;
+        private System.Windows.Forms.HelpProvider helpProvider1;
     }
 }
 
