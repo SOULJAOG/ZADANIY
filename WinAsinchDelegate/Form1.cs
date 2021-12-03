@@ -12,7 +12,7 @@ namespace WinAsinchDelegate
 {
     public partial class Form1 : Form
     {
-        private delegate void TineConsumingMethodDelegate(int second);
+        private delegate void TimeConsumingMethodDelegate(int second);
         private delegate void SetProgressDelegate(int val);
         bool Cansel;
         public void SetProgress(int val) { 
@@ -53,6 +53,12 @@ namespace WinAsinchDelegate
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            TimeConsumingMethodDelegate del = new TimeConsumingMethodDelegate(TimeConsumingMethod);
+            del.BeginInvoke(int.Parse(textBox1.Text), null, null);
         }
     }
 }
