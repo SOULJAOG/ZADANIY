@@ -43,6 +43,7 @@
             this.lblA.AutoSize = true;
             this.lblA.Location = new System.Drawing.Point(8, 24);
             this.lblA.Name = "lblA";
+            this.helpProvider1.SetShowHelp(this.lblA, false);
             this.lblA.Size = new System.Drawing.Size(84, 16);
             this.lblA.TabIndex = 0;
             this.lblA.Text = "Значение А";
@@ -52,6 +53,7 @@
             this.lblB.AutoSize = true;
             this.lblB.Location = new System.Drawing.Point(216, 24);
             this.lblB.Name = "lblB";
+            this.helpProvider1.SetShowHelp(this.lblB, false);
             this.lblB.Size = new System.Drawing.Size(84, 16);
             this.lblB.TabIndex = 1;
             this.lblB.Text = "Значение В";
@@ -70,21 +72,25 @@
             this.helpProvider1.SetHelpString(this.txbA, "For input integer A");
             this.txbA.Location = new System.Drawing.Point(88, 24);
             this.txbA.Name = "txbA";
-            this.helpProvider1.SetShowHelp(this.txbA, true);
+            this.helpProvider1.SetShowHelp(this.txbA, false);
             this.txbA.Size = new System.Drawing.Size(100, 22);
             this.txbA.TabIndex = 3;
             // 
             // txbB
             // 
+            this.helpProvider1.SetHelpString(this.txbB, "For input integer B");
             this.txbB.Location = new System.Drawing.Point(296, 24);
             this.txbB.Name = "txbB";
+            this.helpProvider1.SetShowHelp(this.txbB, true);
             this.txbB.Size = new System.Drawing.Size(100, 22);
             this.txbB.TabIndex = 4;
             // 
             // btnRun
             // 
+            this.helpProvider1.SetHelpString(this.btnRun, "Sum");
             this.btnRun.Location = new System.Drawing.Point(16, 64);
             this.btnRun.Name = "btnRun";
+            this.helpProvider1.SetShowHelp(this.btnRun, true);
             this.btnRun.Size = new System.Drawing.Size(75, 23);
             this.btnRun.TabIndex = 5;
             this.btnRun.Text = "Сумма";
@@ -93,8 +99,10 @@
             // 
             // btnWork
             // 
+            this.helpProvider1.SetHelpString(this.btnWork, "StartWork");
             this.btnWork.Location = new System.Drawing.Point(120, 128);
             this.btnWork.Name = "btnWork";
+            this.helpProvider1.SetShowHelp(this.btnWork, true);
             this.btnWork.Size = new System.Drawing.Size(75, 23);
             this.btnWork.TabIndex = 6;
             this.btnWork.Text = "Работа";
@@ -113,6 +121,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblB);
             this.Controls.Add(this.lblA);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.HelpButton = true;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "Асинхронный запуск";
             this.Load += new System.EventHandler(this.Form1_Load);
