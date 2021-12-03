@@ -48,7 +48,15 @@ namespace WinAsynchMethod
         }
         private void CallBackMethod(IAsyncResult ar)
         {
+            string str;
+            AsyncSumm summdelegate = (AsyncSumm)ar.AsyncState;
+            str = String.Format("Сумма введенных чисел равна {0}", summdelegate.EndInvoke(ar));
+            MessageBox.Show(str, "Результат операции");
+        }
 
+        private void btnWork_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Работа кипит!!!");
         }
     }
 }
