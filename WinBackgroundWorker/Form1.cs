@@ -50,5 +50,10 @@ namespace WinBackgroundWorker
                 backgroundWorker1.ReportProgress((int)(j * 100 / i));
             }
         }
+
+        private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            progressBar1.Value = e.ProgressPercentage;
+        }
     }
 }
