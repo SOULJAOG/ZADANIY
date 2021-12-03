@@ -60,5 +60,10 @@ namespace WinAsinchDelegate
             TimeConsumingMethodDelegate del = new TimeConsumingMethodDelegate(TimeConsumingMethod);
             del.BeginInvoke(int.Parse(textBox1.Text), null, null);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Cansel = true;
+        }
     }
 }
