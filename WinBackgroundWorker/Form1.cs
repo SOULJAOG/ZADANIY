@@ -58,12 +58,26 @@ namespace WinBackgroundWorker
 
         private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            if (!e.Cancelled){
+            if (!(e.Cancelled)){
                 System.Windows.Forms.MessageBox.Show("Run Completed!");
             }
             else {
                 System.Windows.Forms.MessageBox.Show("Run Cancelled");
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (!(textBox1.Text == ""))
+            {
+                int i = int.Parse(textBox1.Text);
+                backgroundWorker1.RunWorkerAsync(i);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            backgroundWorker1.CancelAsync();
         }
     }
 }
