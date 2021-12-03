@@ -55,5 +55,15 @@ namespace WinBackgroundWorker
         {
             progressBar1.Value = e.ProgressPercentage;
         }
+
+        private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if (!e.Cancelled){
+                System.Windows.Forms.MessageBox.Show("Run Completed!");
+            }
+            else {
+                System.Windows.Forms.MessageBox.Show("Run Cancelled");
+            }
+        }
     }
 }
