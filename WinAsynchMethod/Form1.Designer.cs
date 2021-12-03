@@ -32,7 +32,7 @@
             this.lblB = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txbA = new System.Windows.Forms.TextBox();
-            this.rxbB = new System.Windows.Forms.TextBox();
+            this.txbB = new System.Windows.Forms.TextBox();
             this.btnRun = new System.Windows.Forms.Button();
             this.btnWork = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -71,12 +71,12 @@
             this.txbA.Size = new System.Drawing.Size(100, 22);
             this.txbA.TabIndex = 3;
             // 
-            // rxbB
+            // txbB
             // 
-            this.rxbB.Location = new System.Drawing.Point(296, 24);
-            this.rxbB.Name = "rxbB";
-            this.rxbB.Size = new System.Drawing.Size(100, 22);
-            this.rxbB.TabIndex = 4;
+            this.txbB.Location = new System.Drawing.Point(296, 24);
+            this.txbB.Name = "txbB";
+            this.txbB.Size = new System.Drawing.Size(100, 22);
+            this.txbB.TabIndex = 4;
             // 
             // btnRun
             // 
@@ -86,6 +86,7 @@
             this.btnRun.TabIndex = 5;
             this.btnRun.Text = "Сумма";
             this.btnRun.UseVisualStyleBackColor = true;
+            this.btnRun.Click += new System.EventHandler(this.btnRun_Click);
             // 
             // btnWork
             // 
@@ -103,7 +104,7 @@
             this.ClientSize = new System.Drawing.Size(407, 153);
             this.Controls.Add(this.btnWork);
             this.Controls.Add(this.btnRun);
-            this.Controls.Add(this.rxbB);
+            this.Controls.Add(this.txbB);
             this.Controls.Add(this.txbA);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblB);
@@ -122,7 +123,7 @@
         private System.Windows.Forms.Label lblB;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txbA;
-        private System.Windows.Forms.TextBox rxbB;
+        private System.Windows.Forms.TextBox txbB;
         private System.Windows.Forms.Button btnRun;
         private System.Windows.Forms.Button btnWork;
     }
