@@ -35,6 +35,16 @@
             this.oleDbDeleteCommand1 = new System.Data.OleDb.OleDbCommand();
             this.oleDbDataAdapter1 = new System.Data.OleDb.OleDbDataAdapter();
             this.oleDbConnection1 = new System.Data.OleDb.OleDbConnection();
+            this.dataSet11 = new WinBD.DataSet1();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.кодПоставщикаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.поставщикDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.адресПоставщикаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.телефонDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // oleDbSelectCommand1
@@ -99,13 +109,91 @@
             this.oleDbConnection1.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\art_m\\source\\repos\\SOULJAO" +
     "G\\ZADANIY\\RBProduct.mdb";
             // 
+            // dataSet11
+            // 
+            this.dataSet11.DataSetName = "DataSet1";
+            this.dataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(115, 217);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Get Data";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(473, 217);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(120, 23);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Update Data ";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.кодПоставщикаDataGridViewTextBoxColumn,
+            this.поставщикDataGridViewTextBoxColumn,
+            this.адресПоставщикаDataGridViewTextBoxColumn,
+            this.телефонDataGridViewTextBoxColumn});
+            this.dataGridView1.DataMember = "Поставщики";
+            this.dataGridView1.DataSource = this.dataSet11;
+            this.dataGridView1.Location = new System.Drawing.Point(21, 22);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(767, 189);
+            this.dataGridView1.TabIndex = 2;
+            // 
+            // кодПоставщикаDataGridViewTextBoxColumn
+            // 
+            this.кодПоставщикаDataGridViewTextBoxColumn.DataPropertyName = "Код поставщика";
+            this.кодПоставщикаDataGridViewTextBoxColumn.HeaderText = "Код поставщика";
+            this.кодПоставщикаDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.кодПоставщикаDataGridViewTextBoxColumn.Name = "кодПоставщикаDataGridViewTextBoxColumn";
+            this.кодПоставщикаDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // поставщикDataGridViewTextBoxColumn
+            // 
+            this.поставщикDataGridViewTextBoxColumn.DataPropertyName = "Поставщик";
+            this.поставщикDataGridViewTextBoxColumn.HeaderText = "Поставщик";
+            this.поставщикDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.поставщикDataGridViewTextBoxColumn.Name = "поставщикDataGridViewTextBoxColumn";
+            this.поставщикDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // адресПоставщикаDataGridViewTextBoxColumn
+            // 
+            this.адресПоставщикаDataGridViewTextBoxColumn.DataPropertyName = "Адрес поставщика";
+            this.адресПоставщикаDataGridViewTextBoxColumn.HeaderText = "Адрес поставщика";
+            this.адресПоставщикаDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.адресПоставщикаDataGridViewTextBoxColumn.Name = "адресПоставщикаDataGridViewTextBoxColumn";
+            this.адресПоставщикаDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // телефонDataGridViewTextBoxColumn
+            // 
+            this.телефонDataGridViewTextBoxColumn.DataPropertyName = "Телефон";
+            this.телефонDataGridViewTextBoxColumn.HeaderText = "Телефон";
+            this.телефонDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.телефонDataGridViewTextBoxColumn.Name = "телефонDataGridViewTextBoxColumn";
+            this.телефонDataGridViewTextBoxColumn.Width = 125;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Name = "Form2";
             this.Text = "Form2";
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -118,5 +206,13 @@
         private System.Data.OleDb.OleDbCommand oleDbUpdateCommand1;
         private System.Data.OleDb.OleDbCommand oleDbDeleteCommand1;
         private System.Data.OleDb.OleDbDataAdapter oleDbDataAdapter1;
+        private DataSet1 dataSet11;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn кодПоставщикаDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn поставщикDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn адресПоставщикаDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn телефонDataGridViewTextBoxColumn;
     }
 }
