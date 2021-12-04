@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.oleDbSelectCommand1 = new System.Data.OleDb.OleDbCommand();
+            this.oleDbConnection1 = new System.Data.OleDb.OleDbConnection();
             this.oleDbInsertCommand1 = new System.Data.OleDb.OleDbCommand();
             this.oleDbUpdateCommand1 = new System.Data.OleDb.OleDbCommand();
             this.oleDbDeleteCommand1 = new System.Data.OleDb.OleDbCommand();
             this.oleDbDataAdapter1 = new System.Data.OleDb.OleDbDataAdapter();
-            this.oleDbConnection1 = new System.Data.OleDb.OleDbConnection();
             this.dataSet11 = new WinBD.DataSet1();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -51,6 +51,11 @@
             // 
             this.oleDbSelectCommand1.CommandText = "SELECT * FROM Поставщики";
             this.oleDbSelectCommand1.Connection = this.oleDbConnection1;
+            // 
+            // oleDbConnection1
+            // 
+            this.oleDbConnection1.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\art_m\\source\\repos\\SOULJAO" +
+    "G\\ZADANIY\\RBProduct.mdb";
             // 
             // oleDbInsertCommand1
             // 
@@ -104,11 +109,6 @@
                         new System.Data.Common.DataColumnMapping("Телефон", "Телефон")})});
             this.oleDbDataAdapter1.UpdateCommand = this.oleDbUpdateCommand1;
             // 
-            // oleDbConnection1
-            // 
-            this.oleDbConnection1.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\art_m\\source\\repos\\SOULJAO" +
-    "G\\ZADANIY\\RBProduct.mdb";
-            // 
             // dataSet11
             // 
             this.dataSet11.DataSetName = "DataSet1";
@@ -122,6 +122,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Get Data";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -131,6 +132,7 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "Update Data ";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // dataGridView1
             // 
