@@ -32,6 +32,15 @@
             this.odbcConnection1 = new System.Data.Odbc.OdbcConnection();
             this.SuspendLayout();
             // 
+            // odbcCommand1
+            // 
+            this.odbcCommand1.CommandText = "SELECT * FROM Поставщики";
+            this.odbcCommand1.Connection = this.odbcConnection1;
+            // 
+            // odbcConnection1
+            // 
+            this.odbcConnection1.ConnectionString = "Dsn=MS Access Database";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
