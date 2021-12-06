@@ -16,5 +16,22 @@ namespace WinDataSourcesWizard
         {
             InitializeComponent();
         }
+
+        private void поставщики_и_товарыBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.поставщики_и_товарыBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.rBProductDataSet);
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "rBProductDataSet.Товары". При необходимости она может быть перемещена или удалена.
+            this.товарыTableAdapter.Fill(this.rBProductDataSet.Товары);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "rBProductDataSet.Поставщики_и_товары". При необходимости она может быть перемещена или удалена.
+            this.поставщики_и_товарыTableAdapter.Fill(this.rBProductDataSet.Поставщики_и_товары);
+
+        }
     }
 }
