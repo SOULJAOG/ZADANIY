@@ -17,6 +17,7 @@ namespace WinBD
             InitializeComponent();
         }
         DataView ПоставщикиDataView;
+        BindingSource sotrBindingSourse;
         private void button1_Click(object sender, EventArgs e)
         {
             поставщикиTableAdapter1.Fill(rbProductDataSet1.Поставщики);
@@ -36,10 +37,22 @@ namespace WinBD
             ПоставщикиDataView.Sort = SortTextBox.Text;
             ПоставщикиDataView.RowFilter = FilterTextBox.Text;
         }
-
+        private void button4_Click(object sender, EventArgs e)
+        {
+            sotrBindingSourse.MovePrevious();
+        }
         private void Form2_Load(object sender, EventArgs e)
         {
+            поставщикиTableAdapter1.Fill(rbProductDataSet1.Поставщики);
+            sotrBindingSourse = new BindingSource(rbProductDataSet1, "Поставщики");
+            FamtextBox.DataBindings.Add("Text", sotrBindingSourse, "Поставщик");
+            NametextBox.DataBindings.Add("Text",sotrBindingSourse, "Адрес поставщика");
+            SectiontextBox.DataBindings.Add("Text", sotrBindingSourse, "Телефон");
+        }
 
+        private void Nextbutton_Click(object sender, EventArgs e)
+        {
+            sotrBindingSourse.MoveNext();
         }
     }
 }
