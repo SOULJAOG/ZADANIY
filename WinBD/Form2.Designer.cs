@@ -49,6 +49,7 @@
             this.dataSet11 = new WinBD.DataSet1();
             this.поставщикиTableAdapter1 = new WinBD.RBProductDataSetTableAdapters.ПоставщикиTableAdapter();
             this.rbProductDataSet1 = new WinBD.RBProductDataSet();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rbProductDataSet1)).BeginInit();
@@ -118,7 +119,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(116, 220);
+            this.button1.Location = new System.Drawing.Point(63, 218);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
@@ -128,7 +129,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(365, 218);
+            this.button2.Location = new System.Drawing.Point(155, 218);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 1;
@@ -160,7 +161,7 @@
             this.SortTextBox.Name = "SortTextBox";
             this.SortTextBox.Size = new System.Drawing.Size(100, 22);
             this.SortTextBox.TabIndex = 5;
-            this.SortTextBox.Text = "Фамилия";
+            this.SortTextBox.Text = "Поставщик";
             // 
             // FilterTextBox
             // 
@@ -168,7 +169,7 @@
             this.FilterTextBox.Name = "FilterTextBox";
             this.FilterTextBox.Size = new System.Drawing.Size(100, 22);
             this.FilterTextBox.TabIndex = 6;
-            this.FilterTextBox.Text = "Город = \'Пушкин\'";
+            this.FilterTextBox.Text = "Поставщик=\'\'";
             // 
             // dataGridView1
             // 
@@ -234,11 +235,22 @@
             this.rbProductDataSet1.DataSetName = "RBProductDataSet";
             this.rbProductDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(250, 218);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(190, 23);
+            this.button3.TabIndex = 7;
+            this.button3.Text = "Сортировка и фильтрация";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(452, 253);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.FilterTextBox);
             this.Controls.Add(this.SortTextBox);
             this.Controls.Add(this.label2);
@@ -248,6 +260,7 @@
             this.Controls.Add(this.button1);
             this.Name = "Form2";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rbProductDataSet1)).EndInit();
@@ -278,5 +291,6 @@
         private System.Windows.Forms.TextBox FilterTextBox;
         private RBProductDataSetTableAdapters.ПоставщикиTableAdapter поставщикиTableAdapter1;
         private RBProductDataSet rbProductDataSet1;
+        private System.Windows.Forms.Button button3;
     }
 }
